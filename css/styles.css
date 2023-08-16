@@ -1,0 +1,288 @@
+/* Geral */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana;
+}
+
+button {
+  border:1px solid #ddd;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+
+}
+
+
+button:hover > i {
+  color: #fff;
+}
+
+button i {
+  pointer-events: none;
+  color: #cc960c;
+  font-weight: bold;
+}
+.form-control button:hover{
+  background-color:#cc960c;
+}
+#erase-button:hover{
+  background-color:#cc960c;
+}
+.finish-todo:hover,.edit-todo:hover{
+  background-color:#cc960c;
+}
+.remove-all:hover,.remove-todo:hover{
+  background-color:red;
+}
+input,
+select {
+  padding: 0.25rem 0.5rem;
+}
+input:focus{
+  outline:#cc960c;
+  border:1px solid #cc960c;
+}
+.hide {
+  display: none;
+}
+
+/* Todo Header */
+.todo-container {
+  max-width: 550px;
+  margin: 3rem auto 0;
+  background-color:#fdfdfd;
+  padding: 1.5rem;
+  border-radius: 15px;
+
+}
+
+.todo-container header {
+  display:flex;
+  flex-direction:column;
+}
+.todo-container header div{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display:flex;
+  flex-direction:row-reverse;
+  padding:0.6rem;
+}
+.todo-container header div ul{
+  list-style:none;
+  display:flex;
+  gap:1rem;
+}
+.todo-container header div ul li{
+  display:flex;
+  cursor:pointer;
+}
+header h1 {
+  text-align: center;
+  font-size:2.6rem;
+  color:#cc960c;
+  padding:2rem;
+}
+/* Todo Form */
+#todo-form,
+#edit-form {
+  padding:1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+#todo-form{
+  display:none;
+  justify-content:space-around;
+}
+#todo-form.active{
+  display:flex;
+}
+#todo-form p,
+#edit-form p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size:0.8rem;
+}
+.headerForm{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+}
+.headerForm button{
+   background-color:#cc960c;
+   color:#fff;
+}
+.headerForm button i{
+   color:#fff;
+   font-weight: bold;
+   font-size:1.6rem;
+}
+
+#control-edit{
+  display:none;
+  margin-top:1rem;
+}
+#control-edit.active
+{
+  display:flex;
+}
+.addTodo.active,.seachTodo.active{
+  color:#cc960c;
+}
+
+
+.addTodo{
+  display:block;
+}
+.form-control input {
+  margin-right: 0.3rem;
+}
+#control-edit{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+#control-edit button{
+  background-color:#cc960c;
+  color:#fff;
+  border-radius:.2rem;
+}
+#cancel-edit-btn {
+  margin-top: 1rem;
+  color: #444;
+}
+
+/* Todo Toolbar */
+#toolbar {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  display:none;
+}
+#toolbar.active{
+ display:flex;
+}
+
+#toolbar h4 {
+  margin-bottom: 0.5rem;
+  font-size:0.8rem;
+}
+
+#search {
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+#search form {
+  display: flex;
+}
+
+#search input{
+  width: 100%;
+  margin-right: 0.3rem;
+}
+
+#filter {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#filter select {
+  flex: 1;
+}
+
+/* Todo List */
+.todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+   /*padding: 1rem 1rem;*/
+  /*border-bottom: 1px solid #ddd;*/
+  transition: 0.3s;
+  padding:10px;
+  border-left:4px solid #b5bcc2;
+}
+.header{
+  display:flex;
+  flex-direction:column;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 1rem;
+  
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0,0.1);
+
+}
+.header p{
+  font-size:1rem;
+  color:#9b9ba2;
+  padding-top:1rem;
+}
+.header small{
+  font-size:0.6rem;
+  color:#9b9ba2;
+  padding-top:1rem;
+}
+.todoHeader{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
+   background-color:#f6f6f6;
+}
+.todoHeader.close{
+  display:none;
+}
+
+.todo h3,.todoHeader,h3{
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.todo button {
+  margin-left: 0.4rem;
+}
+
+.done {
+  border-left:4px solid #cc960c;
+  background-color:#fff;
+  color:#000;
+}
+.done h3 {
+  
+  text-decoration: line-through;
+  font-style:italic;
+}
+.process{
+   background-color:#ffff;
+   color:#000;
+   border-left:4px solid #0231e8;
+}
+.process-todo:hover{
+  background-color:#0231e8;
+  color:#fff;
+}
+
+html{
+  height:100vh;
+}
+.addEvent{
+  background-color:red;
+  padding:2rem;
+  position:absolute;
+  float:right;
+}
+.status_todoList{
+  color:#969393;
+  padding:.1em;
+  margin-right:2em;
+}   

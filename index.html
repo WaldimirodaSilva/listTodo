@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Avançado</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../Icons/icons-main/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../Icons/boxicons-master/css/boxicons.css">
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="todo-container">
+      <header>
+        <h1 class="bx bx-book-open"></h1>
+        <div>
+           <ul>
+              <li class="seachTodo"><i class="bx bx-search"></i></li>
+                <li class="addTodo"><i class="bx bx-add-to-queue"></i></li>
+           </ul>
+        </div>
+      </header>
+      <form id="todo-form">
+        <div class="form-control" id="control-edit">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Tarefa"
+          />
+          <input
+            type="text"
+            id="todo-desc"
+            placeholder="Descreva actividade..."
+          />
+          
+          <button type="submit">
+            <i class="bi bi-plus"></i> Tarefa
+          </button>
+
+          
+        </div>
+      </form>
+      <form id="edit-form" class="hide">
+        <p>Edite sua tarefa</p>
+        <div class="form-control">
+          <input type="text" id="edit-input"/>
+          <input type="text" id="edit" placeholder="Descrever...">
+          <button type="submit">
+            <i class="bi bi-check2-all"></i>
+          </button>
+
+        </div>
+         <button id="cancel-edit-btn">Cancelar</button>
+      </form>
+      <div id="toolbar">
+        <div id="search">
+          <form>
+            <input type="text" id="search-input" placeholder="Buscar..." />
+            <button id="erase-button">
+              <i class="bi bi-file-excel"></i>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <select id="filter-select">
+            <option value="all">Todos</option>
+            <option value="done">Feitos</option>
+            <option value="todo">Em processo</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="todo-list">
+         
+       <!-- 
+        <div class="header">
+             <div class="todo process">
+              <h3>Envio de wiframe de Elementos</h3>
+          <button class="process-todo">
+            <i class="bx bx-pin"></i>
+          </button>
+          <button class="finish-todo">
+            <i class="bi bi-check2"></i>
+          </button>
+          <button class="edit-todo">
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button class="remove-todo">
+            <i class="bi bi-trash"></i>
+          </button>
+             </div>
+             <p>Criar wiframe para o e-comerce</p>
+             <small>Vencimento 28/Julho</small>
+             
+        </div> 
+      </div>
+       <div class="header">
+             <div class="todo done">
+              <h3>Modelagem da Base de Dados</h3>
+          <button class="finish-todo">
+            <i class="bi bi-check2"></i>
+          </button>
+          <button class="process-todo">
+            <i class="bx bx-pin"></i>
+          </button>
+          <button class="edit-todo">
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button class="remove-todo">
+            <i class="bi bi-trash"></i>
+          </button>
+             </div>
+             <p>Criar o modelo DER,MER e disponibilizar no formato myql</p>
+             <small>Vencimento 28/Julho</small>
+             
+        </div> 
+        <div class="header">
+             <div class="todo">
+              <h3>Estou fazendo algo aqui...</h3>
+          <button class="finish-todo">
+            <i class="bi bi-check2"></i>
+          </button>
+          <button class="process-todo">
+            <i class="bx bx-pin"></i>
+          </button>
+          <button class="edit-todo">
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button class="remove-todo">
+            <i class="bi bi-trash"></i>
+          </button>
+             </div>
+             <p>lorekjsdjksjkhfghjgfhsdhbg</p>
+             <small>Vencimento 28/Julho</small>
+             
+        </div> --> 
+      </div>
+      <div class="todoHeader">
+          <h3>Limpar</h3>
+          <div class="status_todoList">
+          <small> Todos (0) </small><br>
+          <small> Feitos (0) </small><br>
+          <small>  Em processo (0) </small>
+          </div>
+          <button class="remove-all">
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+    </div>
+   
+  </body>
+</html>
